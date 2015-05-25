@@ -1,0 +1,135 @@
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-custom";
+@import "base";
+@import "variables";
+@import "mixins";
+
+body {
+  padding-top: 50px;
+}
+
+body {
+	padding-top: 0;
+	background: url("../img/bg.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color: #475F61;
+	background-size: cover;
+}
+.big-cover {
+	@extend .jumbotron;
+}
+
+.wrap {
+	@extend .row;
+}
+
+.column {
+	@extend .col-md-3;
+	background-color: #fff;
+	padding-left: 0;
+	padding-right: 0;
+	margin: 5px;
+	width: 24%;
+	text-align: center;
+
+	img {
+		padding: 3em;
+	}
+
+	p {
+		text-align: left;
+		margin-left: 3em;
+	}
+
+	a{
+		float: right;
+	  margin-right: 3em;
+	  position: relative;
+	  bottom: 37px;
+	}
+}
+
+.welcome-bar {
+	@extend .container-fluid;
+	background: #000;
+
+	p {
+		color: grey;
+	}
+}
+
+.logo-bar {
+	@extend .container-fluid;
+	height: 5em;
+	background: $background;
+}
+.navbar-brand  {
+	 img {
+	  display: inline-block;
+	  width: 8%;
+	}
+  	h1 {
+  		position: relative;
+	  	bottom: 60px;
+	  	left: 66px;
+  }
+}
+
+.search-bar {
+	margin-top: 1.3em;
+}
+
+.nav-justified{
+	@extend .nav-justified;
+	background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+
+    li {
+    	display: table-cell;
+    	width: 1%;
+
+    	a {
+    		background-color: #e5e5e5;
+		    background-repeat: repeat-x;
+		    border-bottom: 1px solid #d5d5d5;
+		    color: #777;
+		    font-weight: bold;
+		    margin-bottom: 0;
+		    padding-bottom: 15px;
+		    padding-top: 15px;
+		    text-align: center;
+		    border-left: 1px solid #fff;
+    		border-right: 1px solid #d5d5d5;
+    	}
+    }
+}
+
+.clearfix {
+	@extend .clearfix;
+}
+
+.jumbotron {
+	background: url("../img/slider.jpg");
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #000;
+}
+
+.btn-default {
+	@include button-default($kuning);
+}
+
+.nav-justified {
+	li a {
+		@include button-default($kuning);
+	}
+}
