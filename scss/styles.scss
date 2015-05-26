@@ -1,6 +1,6 @@
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-custom";
-@import "base";
 @import "variables";
+@import "base";
 @import "mixins";
 
 body {
@@ -36,6 +36,10 @@ body {
 		padding: 3em;
 	}
 
+	> p {
+		margin-bottom: 1em;
+	}
+
 	p {
 		text-align: left;
 		margin-left: 3em;
@@ -53,6 +57,10 @@ body {
 	@extend .container-fluid;
 	background: #000;
 
+	a {
+		color: $background;
+	}
+
 	p {
 		color: grey;
 	}
@@ -62,11 +70,15 @@ body {
 	@extend .container-fluid;
 	height: 5em;
 	background: $background;
+
+	h1 {
+		color: darken($base, 5%);
+	}
 }
 .navbar-brand  {
 	 img {
 	  display: inline-block;
-	  width: 8%;
+	  width: 10%;
 	}
   	h1 {
   		position: relative;
@@ -126,10 +138,59 @@ body {
 
 .btn-default {
 	@include button-default($kuning);
+	color: $fontbase;
 }
 
 .nav-justified {
 	li a {
 		@include button-default($kuning);
+		color: $fontbase;
 	}
+}
+
+.single-page-col {
+	@extend .col-md-12;
+	background: $background;
+}
+
+.breadcrumb {
+	@extend .col-md-5;
+	@extend .breadcrumb;
+	background: lighten($kuning, 15%);
+	margin-top: 1em;
+
+	> li + li:before {
+		content: "/";
+	}
+}
+
+.buy-section {
+	@extend .col-md-12;
+	background: lighten($kuning, 20%);
+	text-align: center;
+	font-size: 1,5em;
+	height: 8em;
+
+	span {
+	  background-color: #fff;
+	  padding: 1em;
+	  margin: 1em;
+	}	
+}
+
+.prod-thum-wrap {
+	@extend .row;
+	margin-top: 1em;
+	margin-bottom: 1em;
+
+	.prod-thum {
+		@extend .col-md-3;
+	}
+}
+
+.related-products {
+	@extend .col-md-12;
+	background: lighten($kuning, 20%);
+	margin-top: 1em;
+  	margin-bottom: 1em;
 }
